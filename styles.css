@@ -1,0 +1,122 @@
+
+
+.grid__body {
+    display: grid;
+    grid-template: 1.5fr 2fr 1fr / 125px minmax(125px, 1fr) 300px;
+    grid-auto-rows: 200px;
+}
+
+
+.grid__item {
+    text-align: center;
+    border: 1px dashed rgb(133, 129, 129);
+    padding: 10px;
+}
+
+.gridwrapper {
+    display: grid;
+
+    grid-template: [start] "header header" 100px [row2]
+    [row2] "side content" 1fr[row-end] / 150px 1fr;
+}
+
+.grid-header {
+    grid-area: header;
+}
+.grid-aside {
+    grid-area: side;
+}
+.grid-main {
+    grid-area: content;
+}
+
+/*
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "header header"
+                        "side content" ; */
+               
+
+
+.grid-header,
+.grid-aside,
+.grid-main {
+    text-align: center;
+    border: 1px dashed rgb(133, 129, 129);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+.grid__cont {
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+    grid-template-rows: 50px 1fr 60px 1fr;
+    grid-template-areas: "row1 row1 row2"
+    "row1 row1 row2"
+    "row3 row4 row5"
+    "row6 row7 row5"
+    "row8 row9 row9";
+}
+
+
+.grid__item_1 {
+    grid-area: row1;
+}
+.grid__item_2 {
+    grid-area: row2;
+}
+.grid__item_3 {
+    grid-area: row3;
+}
+.grid__item_4 {
+    grid-area: row4;
+}
+.grid__item_5 {
+    grid-area: row5;
+}
+.grid__item_6 {
+    grid-area: row6;
+}
+.grid__item_7 {
+    grid-area: row7;
+}
+.grid__item_8 {
+    grid-area: row8;
+}
+.grid__item_9 {
+    grid-area: row9;
+}
+
+
+
+/* Grid start */
+.grid__start {
+    display: grid;
+    grid-template-columns: 1fr 30% 40%;
+    grid-template-rows: 70px 35% 70px;
+    gap: 5px;
+}
+
+
+.grid__it_1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: rgb(153, 14, 14);
+}
+.grid__it_2 {
+    grid-row-start: span 4;
+    /*grid-row-end: 3;    не нужен*/
+    grid-column-start: span 2;
+    /*grid-column-end: 4; не нужен*/
+    background-color: rgb(14, 58, 153);
+}
+
+.grid__it_5 {
+    grid-row: 7 / 9;
+    grid-column: 2 / 4;
+    background-color: green;
+}
